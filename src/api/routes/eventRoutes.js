@@ -309,6 +309,68 @@ router.get("/scheduled", scheduleEvent);
  */
 router.get("/past", pastEvent);
 
+/**
+ * @swagger
+ * /api/v1/events/{id}:
+ *   put:
+ *     summary: Update an existing event
+ *     tags: [Events]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *           format: uuid
+ *         description: The ID of the event to update
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 description: "Name of the event"
+ *                 example: "Updated Event Name"
+ *               invites:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                   format: uuid
+ *                 description: "List of contacts invited to the event"
+ *                 example: ["60f8d8d2f2f4a35a343d8e0d", "60f8d8d2f2f4a35a343d8e0e"]
+ *               messagedate:
+ *                 type: string
+ *                 format: date
+ *                 description: "Date when the message was sent"
+ *                 example: "2024-09-10"
+ *               eventdate:
+ *                 type: string
+ *                 format: date
+ *                 description: "Date of the event"
+ *                 example: "2024-09-20"
+ *               message:
+ *                 type: string
+ *                 format: uuid
+ *                 description: "ID of the message associated with the event"
+ *                 example: "60f8d8d2f2f4a35a343d8e0f"
+ *     responses:
+ *       200:
+ *         description: Event successfully updated
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: "#/components/schemas/Event"
+ *       400:
+ *         description: Invalid request data
+ *       404:
+ *         description: Event not found
+ *       500:
+ *         description: Internal server error
+ */
+
 router.put("/:id", updateEvent);
 
 module.exports = router;

@@ -74,8 +74,8 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
     .update(req.params.token)
     .digest("hex");
 
-  console.log("Received token:", req.params.token);
-  console.log("Hashed token:", hashedToken);
+  // console.log("Received token:", req.params.token);
+  // console.log("Hashed token:", hashedToken);
 
   const admin = await Admin.findOne({
     passwordResetToken: hashedToken,

@@ -1,8 +1,6 @@
 const express = require("express");
 const { Event, Message } = require("../models");
 const catchAsync = require("../utils/catchAsync");
-const handleFactory = require("./handlerFactory");
-const { scheduleEventEmail } = require("../utils/cronScheduler");
 const moment = require("moment-timezone");
 const AppError = require("../utils/appError.js");
 const { validationResult, check } = require("express-validator");

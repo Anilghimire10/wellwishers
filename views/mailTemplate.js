@@ -1,6 +1,3 @@
-<<<<<<<< 96d40819860e1f2e046ff0fefcc8f3391592fc3c:views/mailTemplate.js
-========
-<<<<<<< HEAD
 exports.emailTemplate = `<table role="presentation" border="0" cellpadding="0" cellspacing="10px" style="padding: 30px 30px 30px 60px;">
     <tr>
       <td>
@@ -592,8 +589,7 @@ exports.birthdayTemplate = `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transit
 </body>
 
 </html>`;
-=======
->>>>>>>> 1b9a64d05d8d9ddce5d1ef027fa07db082dcce7f:src/api/views/mailTemplate.js
+
 exports.emailTemplate = `<table role="presentation" border="0" cellpadding="0" cellspacing="10px" style="padding: 30px 30px 30px 60px;">
     <tr>
       <td>
@@ -1185,7 +1181,3 @@ exports.birthdayTemplate = `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transit
 </body>
 
 </html>`;
-<<<<<<<< 96d40819860e1f2e046ff0fefcc8f3391592fc3c:views/mailTemplate.js
-========
->>>>>>> aa45ea77f6577c45f3adb38c5e69621f11d1a868
->>>>>>>> 1b9a64d05d8d9ddce5d1ef027fa07db082dcce7f:src/api/views/mailTemplate.js
